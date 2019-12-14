@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Roboto|Grand+Hotel&display=swap');
+
+body {
+  display:none ;
+  background: #efefef;
+  line-height: 1.4;
+  font-family: 'Roboto', sans-serif;
+}
+
+h4 {
+  margin: 0px 0 10px;
+  color: #aaa;
+  font-size: 0.8em;
+} 
+
+ul {   padding: 0;  }
+li { list-style-type:none; }
+
+* {
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra depuis la version 15 */
+  -ms-user-select: none; /* Internet explorer depuis la version 10 et Edge */
+  user-select: none; /* Propriété standard */
+}
+
+header {
+  background-color: #9393e6;
+  padding: 7px 10px;
+}
+
+header h1 {
+  font-family: 'Grand Hotel', cursive;
+}
+
+header h2 {
+  font-size: 0.8em;
+  position: absolute;
+  top: 14px;
+  right: 11px;
+  color: #5f5f5f;
+}
+
+.bouton {
+  margin: 10px 10px 0 0;
+  font-size: 0.9em;
+  padding: 5px 10px;
+}
+
+.error-message {
+  display: none;
+  font-size: 0.8em;
+  font-weight: bold;
+  text-align: center;
+  color: #2b2b2b;
+  background-color: #bdd9f9;
+  padding: 7px 5px;
+  border-radius: 3px;
+}
+
+#checkout_list li.checkout_line {
+  display:none;
+  background-color: #f3f2f2;
+  margin-bottom: 5px;
+  padding-top: 8px;
+}
+
+#checkout_list input { 
+  text-align: right; 
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.8em;
+  vertical-align: 5px;
+}
+
+#checkout_list input.conso_nombre {
+  width: 15px;
+  margin: 0 2px 0 0;
+}
+
+#checkout_list input.conso_prix_unit {
+  width: 25px;
+  margin: 0 0 0 5px;
+}
+
+#checkout_list input.conso_prix_total {
+  font-weight: bold;
+  width: 27px;
+}
+
+#checkout_list span {
+  font-size: 0.8em;
+  vertical-align: 5px;
+}
+
+#checkout_list i {
+  cursor: pointer;
+}
+
+
+#checkout_list i.fa-minus-square {
+  font-size: 1.7em;
+  margin: 0 5px 0 5px;
+}
+
+#checkout_list i.fa-plus-square {
+  font-size: 1.7em;
+}
+
+#checkout_list i.fa-trash-alt {
+  font-size: 1.2em;
+  margin-left: 5px;
+}
+
+#checkout_list i:active {
+  color: #999;
+}
+
+#checkout_list span.conso_nom {
+  width: calc(100% - 220px);
+  display: inline-block;
+  margin-left: 10px;
+  font-size: 0.8em;
+  vertical-align: 8px;
+  letter-spacing: 1px;
+}
+
+
+
+#header div.header-element {
+  float: left;
+  width: 30%;
+  margin: 10px 1.5% 5px;
+  padding-top: 12px;
+  height: 70px;
+  font-size: 1em;
+  background-color: #6f6f6f;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+}
+ 
+
+#total-consigne-wrapper button {
+  font-size: 1.6em;
+    outline: none;
+    padding: 0 12px;
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+#total-consigne-wrapper button:hover {
+  color: #aaa;
+}
+
+#total-consigne-wrapper button:active {
+  color: black;
+}
+
+
+.grid_carte {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  grid-gap: 0.5em;
+}
+
+.grid_carte li {
+  list-style: none;
+  height: 105px;
+  padding: 1.1em 0em;
+  text-align: center;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 5px;
+  font-family: 'Bebas Neue', cursive;
+  background-position: center;
+  transition: background 0.8s;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+}
+
+.grid_carte li .unit-bullet {
+  background-color: #555;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  margin-left: 5px;
+  margin-top: 10px;
+  float:left;
+}
+
+li.conso-button:active { /* effet au click */
+  background-color: #333 !important;
+  color: white !important;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.grid_monnaie {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(55px, 1fr));
+  grid-gap: 0.5em;
+}
+
+.grid_monnaie li {
+  list-style: none;
+  text-align: center;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-family: 'Bebas Neue', cursive;
+  background-color: #ccc;
+  cursor: pointer;
+  background-position: center;
+  transition: background 0.8s;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+}
+
+.grid_monnaie li:active { /* effet au click */
+  background-color: #333 !important;
+  color: white !important;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+
+
+li.conso-button div {
+  font-size: 0.6em;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.monnaieSur {
+  padding: 11px 0px;
+  margin-top: 10px;
+} 
+
+.selected {
+  background-color:#ffc800 !important;
+}
+
+.monnaieTotal, .rappelTotal {
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 20px 0;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.16);
+}
+
+.monnaieTotal {
+  margin-top: 20px;
+}
+
+.monnaieTotal h4, .rappelTotal h4 {
+  margin-bottom: 11px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #777;
+}
+
+.monnaieTotal {
+  background-color: #c7e2a8;
+}
+
+.rappelTotal {
+  background-color: #c2e1ea;
+}
+
+
+li.conso-taken {
+  list-style: none;
+  padding: 0.7rem 1rem;
+  text-align: center;
+  font-size: 1.1rem;
+  background: #dedede;
+  color: #000;
+  margin: 5px 0;
+}
+
+
+
+#total-consosprice:after, #total-price:after { content: ' €'; }
+
+
+
+
+#total-consosprice-wrapper, #total-consigne-wrapper { margin-right: 2%; }
+
+#total-price-wrapper { background-color: #505050 !important; }
+#total-price { font-weight: bold; color: #eee; }
+
+#total-consos, #total-consigne { color: #eee;  font-weight: bold;  }
+
+
+
+#reset-button {
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  z-index: 10;
+  width: auto;
+  margin: 0 1.5%;
+  height: 70px;
+  font-size: 1.3em;
+}
+
+#slide-button {
+  position: absolute;
+  top: 32px;
+  right: 15px;
+  width: auto;
+  margin: 0 1.5%;
+  height: 50px;
+  font-size: 1.3em;
+}
+
+.delete-button { 
+  cursor:pointer; 
+  float: left;
+  width: 25px;
+  opacity: 0.5;
+}
+
+#tab-carte {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#tab-commande {
+  padding-top: 10px !important;
+}
+
+#carte_liste h2 {
+  margin-top: 15px;
+  font-size: 1.5em;
+}
+
+#carte_liste li {
+  background-color: #f5f5f5;
+  margin-bottom: 4px;
+  padding: 3px 10px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+
+#carte_liste span.carte_conso_catego {
+
+}
+
+#carte_liste span.carte_conso_catego:after { content: " "; }
+
+#carte_liste span.carte_conso_nom {
+  
+} 
+
+#carte_liste .demi:after, #carte_liste .pinte:after {
+  content:url(../img/logo_troisloups.png) ;
+  position:relative; 
+  left:0px;
+  top:5px;
+}
+
+#carte_liste .heineken:after {
+  content:url(../img/logo_heineken.png) ;
+  position:relative; 
+  left:0px;
+  top:5px;
+}
+
+#carte_liste span.carte_conso_quantite {
+  font-size: 80%;
+  color: #777;
+}
+
+#carte_liste span.carte_conso_quantite:before { content: " ("; }
+#carte_liste span.carte_conso_quantite:after { content: " cl)"; }
+
+#carte_liste span.carte_conso_prix {
+  float: right;
+}
+
+#carte_liste span.carte_conso_prix:after { content: " €"; }
+
+
+#xml-editarea {
+  height: 220px;
+  width: 100%;
+  font-size: 0.7em;
+}
+
+
+.settings-line h4 {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.settings-line span {
+  vertical-align: -5px;
+  font-size: 0.9em;
+}
+
+/*SWITCH*/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  align-self: center;
+  transform: scale(0.5);
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider {
+  border-radius: 30px;
+}
+
+.slider:before {
+  border-radius: 50%;
+}

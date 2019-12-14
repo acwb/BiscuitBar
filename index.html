@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en" class="js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Biscuit' Bar</title>
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+	<!-- Feuille de styles --> 
+	<link rel="stylesheet" href="css/framework.css">
+	<link rel="stylesheet" href="css/style.css">  
+	<link rel="stylesheet" href="css/fontawesome.css">
+</head>
+<body>
+
+ 
+<img src="img/refresh.png" id="reset-button" />
+
+<audio id="clicksound" preload="auto">
+   <source src="click.wav" id="1"></source>
+</audio>
+
+<header>
+	<h1 id="app_name"></h1>
+	<h2 id="app_version"></h2>
+</header>
+
+<div class="cd-tabs cd-tabs--vertical container  js-cd-tabs">
+    <nav class="cd-tabs__navigation">
+      <ul class="cd-tabs__list">
+
+        <li id="tab_commande">
+          <a href="#tab-commande" class="cd-tabs__item cd-tabs__item--selected">
+            <i class="fas fa-beer"></i>
+            <span>Commande</span>
+          </a>
+        </li>
+
+        <li id="tab_ticket">
+          <a href="#tab-ticket" class="cd-tabs__item">
+            <i class="fas fa-shopping-basket"></i>
+            <span>Ticket</span>
+          </a>
+        </li>
+
+        <li id="tab_monnaie">
+          <a href="#tab-monnaie" class="cd-tabs__item">
+            <i class="fas fa-coins"></i>
+            <span>Monnaie</span>
+          </a>
+        </li>
+
+        <li id="tab_carte">
+          <a href="#tab-carte" class="cd-tabs__item">
+            <i class="fas fa-book-open"></i>
+            <span>Carte</span>
+          </a>
+        </li>
+
+        <li id="tab_config">
+          <a href="#tab-config" class="cd-tabs__item">
+            <i class="fas fa-cog"></i>
+            <span>Configuration</span>
+          </a>
+        </li>
+
+        
+      </ul> <!-- cd-tabs__list -->
+    </nav>
+
+    
+    <ul class="cd-tabs__panels">
+
+    	<div id="header">
+			<div class="header-element" id="total-consosprice-wrapper">
+				<h4><span id="total-consos"></span> CONSOS</h4>
+				<span id="total-consosprice"></span>
+			</div>
+			<div class="header-element" id="total-consigne-wrapper">
+				<h4><span id="total-consigne"></span> CONSIGNES</h4>
+				<div class="number-input number-input--v2 js-number-input">
+					<button class="consigne-moins reset number-input__btn number-input__btn--minus js-number-input__btn" aria-hidden="true">
+					    <i class="fas fa-minus-circle"></i>
+					</button>
+					<button class="consigne-plus reset number-input__btn number-input__btn--plus js-number-input__btn" aria-hidden="true">
+					    <i class="fas fa-plus-circle"></i>
+					</button>
+				</div>
+			</div>
+			<div class="header-element" id="total-price-wrapper">
+				<h4>TOTAL</h4>
+				<span id="total-price"></span>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+
+		<li id="tab-commande" class="cd-tabs__panel cd-tabs__panel--selected text-component">
+			<ul class="grid_carte"></ul>
+			<div class="error-message" id="xml_empty">Erreur de configuration de la carte des consos<br/><br/><a href="reset-xml.php">réinitialiser la configuration par défaut</a></div>
+		</li>
+
+      <li id="tab-ticket" class="cd-tabs__panel text-component">
+      	<div class="error-message" id="checkout_list_empty">Ticket vide, sélectionner des consos dans l'onglet Commande.</div>
+        <ul id="checkout_list">
+
+		</ul>
+      </li>
+
+      <li id="tab-monnaie" class="cd-tabs__panel text-component">
+
+      	<div class="rappelTotal">
+      		<h4>Total de la commande</h4>
+      		<span id="rappelTotalCommande">0</span> €
+      	</div>
+
+      	<ul class="grid_monnaie">
+	        <li class="monnaieSur" somme="10">10€</li>
+			<li class="monnaieSur" somme="15">15€</li>
+			<li class="monnaieSur" somme="20">20€</li>
+			<li class="monnaieSur" somme="25">25€</li>
+			<li class="monnaieSur" somme="30">30€</li>
+			<li class="monnaieSur" somme="35">35€</li>
+			<li class="monnaieSur" somme="40">40€</li>
+			<li class="monnaieSur" somme="45">45€</li>
+			<li class="monnaieSur" somme="50">50€</li>
+		</ul>
+
+		<div class="monnaieTotal">
+      		<h4>Monnaie à rendre</h4>
+      		<span id="monnaieArendre">0</span> €
+      	</div>
+		
+      </li>
+
+      <li id="tab-carte" class="cd-tabs__panel text-component">
+      	<ul id="carte_liste"></ul>
+      </li>
+
+      <li id="tab-config" class="cd-tabs__panel text-component">
+
+      	<h3>Options</h3>
+
+
+      	<div class="settings-line">
+      		<label class="switch"><input type="checkbox" id="setting_showHeader" ><span class="slider"></span></label>
+      		<span>Afficher le header</span>
+      	</div>
+
+      	<div class="settings-line">
+      		<label class="switch"><input type="checkbox" id="setting_showTabsicons" ><span class="slider"></span></label>
+      		<span>Afficher les icônes des onglets</span>
+      	</div>
+
+      	<div class="settings-line">
+      		<h4>Ajouter les consignes automatiquement</h4>
+      	</div>
+
+      	<div class="settings-line">
+      		<label class="switch"><input type="checkbox" id="setting_autoConsignes_Pression" ><span class="slider"></span></label>
+      		<span>Bière Pression</span>
+      	</div>
+
+      	<div class="settings-line">
+      		<label class="switch"><input type="checkbox" id="setting_autoConsignes_Blida" ><span class="slider"></span></label>
+      		<span>Blida de Champagne</span>
+      	</div>
+
+      	<div class="settings-line">
+      		<label class="switch"><input type="checkbox" id="setting_autoConsignes_Coca" ><span class="slider"></span></label>
+      		<span>Coca Cola</span>
+      	</div>
+
+      	<div class="settings-line">
+      		<label class="switch"><input type="checkbox" id="setting_autoConsignes_Jus" ><span class="slider"></span></label>
+      		<span>Jus de fruit</span>
+      	</div>
+
+      	<h3>Edition la carte des consos</h3>
+      	<form name="savefile" method="post" action="save-xml.php">
+      		<textarea name="xmlfile" id="xml-editarea"></textarea><br/>
+      		<input type="submit" name="save" class="bouton" value="Sauvegarder">
+      		<a href="reset-xml.php"><input type="button" name="reset" class="bouton"  value="Reset" /> </a>
+      	</form>
+
+
+      </li>
+
+      
+    </ul> <!-- cd-tabs__panels -->
+  </div> <!-- cd-tabs -->
+
+
+
+
+
+<script src="js/jquery-2.1.1.js"></script>
+<script src="js/util.js"></script>
+<script src="js/tabnav.js"></script>
+<script src="js/script.js"></script> 
+</body>
+</html>

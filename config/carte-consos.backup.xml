@@ -1,0 +1,159 @@
+<?xml version='1.0' standalone='yes'?>
+<carte>
+ <conso>
+  <catego>Bière</catego>
+  <id>demi</id>
+  <nom>demi</nom>
+  <desc>Bière Pression</desc>
+  <prix>3</prix>
+  <quantite>25</quantite>
+  <backgroundcolor>#69c3de</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+ 
+ <conso>
+  <catego>Bière</catego>
+  <id>pinte</id>
+  <nom>pinte</nom>
+  <desc>Bière Pression</desc>
+  <prix>5.50</prix>
+  <quantite>50</quantite>
+  <backgroundcolor>#3681c1</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Bière</catego>
+  <id>heineken</id>
+  <nom>heineken</nom>
+  <desc>Bière Canette</desc>
+  <prix>2.50</prix>
+  <quantite>33</quantite>
+  <backgroundcolor>#008200</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Champagne</catego>
+  <id>blida</id>
+  <nom>blida</nom>
+  <desc>Blida de Champagne</desc>
+  <prix>3</prix>
+  <quantite>12,5</quantite>
+  <backgroundcolor>#f5ff61</backgroundcolor>
+  <textcolor>black</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Champagne</catego>
+  <id>bouteillechamp</id>
+  <nom>bouteille</nom>
+  <desc>Bouteille de Champagne</desc>
+  <prix>18</prix>
+  <quantite>75</quantite>
+  <backgroundcolor>#ffce61</backgroundcolor>
+  <textcolor>black</textcolor>
+ </conso>
+
+
+
+  <conso>
+  <catego>Vin</catego>
+  <id>vinrouge</id>
+  <nom>vin rouge</nom>
+  <desc>Verre de vin rouge</desc>
+  <prix>2.50</prix>
+  <quantite>12,5</quantite>
+  <backgroundcolor>#b354d2</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Vin</catego>
+  <id>vinblanc</id>
+  <nom>vin blanc</nom>
+  <desc>Verre de vin blanc</desc>
+  <prix>2.50</prix>
+  <quantite>12,5</quantite>
+  <backgroundcolor>#ded9a9</backgroundcolor>
+  <textcolor>black</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Soft</catego>
+  <id>coca</id>
+  <nom>coca cola</nom>
+  <desc>Coca-Cola</desc>
+  <prix>2</prix>
+  <quantite>33</quantite>
+  <backgroundcolor>#F40009</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+  <conso>
+  <catego>Soft</catego>
+  <id>icetea</id>
+  <nom>ice tea</nom>
+  <desc>Ice-Tea</desc>
+  <prix>2</prix>
+  <quantite>33</quantite>
+  <backgroundcolor>#a76b45</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+   <conso>
+  <catego>Soft</catego>
+  <id>jus</id>
+  <nom>jus de fruit</nom>
+  <desc>Jus de fruit</desc>
+  <prix>2</prix>
+  <quantite>25</quantite>
+  <backgroundcolor>#ec8a2c</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Eau</catego>
+  <id>perrier</id>
+  <nom>perrier</nom>
+  <desc>Perrier</desc>
+  <prix>1.50</prix>
+  <quantite>33</quantite>
+  <backgroundcolor>#289A55</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Eau</catego>
+  <id>eau</id>
+  <nom>eau minérale</nom>
+  <desc>Eau minérale</desc>
+  <prix>1</prix>
+  <quantite>25</quantite>
+  <backgroundcolor>#bee6e3</backgroundcolor>
+  <textcolor>black</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Boissons chaudes</catego>
+  <id>the</id>
+  <nom>thé</nom>
+  <desc>Thé</desc>
+  <prix>1</prix>
+  <quantite>20</quantite>
+  <backgroundcolor>#bee6c3</backgroundcolor>
+  <textcolor>black</textcolor>
+ </conso>
+
+ <conso>
+  <catego>Boissons chaudes</catego>
+  <id>cafe</id>
+  <nom>café</nom>
+  <desc>Café</desc>
+  <prix>1</prix>
+  <quantite>10</quantite>
+  <backgroundcolor>#8a6456</backgroundcolor>
+  <textcolor>white</textcolor>
+ </conso>
+
+</carte>
